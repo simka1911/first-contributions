@@ -87,6 +87,32 @@ git clone https://github.com/this-is-you/first-contributions.git
 ```
 where `this-is-you` is your GitHub username. Here you're copying the contents of the first-contributions repository in GitHub to your computer.
 
+## Set up commiter name and email
+
+> If you are only using only one email you can skip this step
+
+It is possible to use different git configuration for each repo. For example you can have public/private or work/private emails on the same machine.
+
+
+By default you will most probably have global email and name already configured.
+In order to use alternate identity for this repository you have to set it up.
+```
+git config user.name "Your-visible-name"
+```
+```
+git config user.email "your-alternate-email@example.com"
+```
+Be careful to *not* use the `--global` flag unless you want to set it up for *all* repositories on your machine.
+
+You can verify that the properties have been set with these commands
+```
+git config user.name
+```
+```
+git config user.email
+```
+or by opening `.git/config` file in your repository.
+
 ## Create a branch
 
 Change to the repository directory on your computer (if you are not already there):
