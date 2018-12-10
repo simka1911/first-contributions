@@ -93,16 +93,18 @@ where `this-is-you` is your GitHub username. Here you're copying the contents of
 
 It is possible to use different git configuration for each repo. For example you can have public/private or work/private emails on the same machine.
 
-
 By default you will most probably have global email and name already configured.
-In order to use alternate identity for this repository you have to set it up.
+
+In order to use alternate identity for this repository you have to set it up. Change to the repository directory if you are not already there and:
+
 ```
 git config user.name "Your-visible-name"
 ```
 ```
 git config user.email "your-alternate-email@example.com"
 ```
-Be careful to *not* use the `--global` flag unless you want to set it up for *all* repositories on your machine.
+
+Be careful to **not** use the `--global` flag unless you want to set it up for **all** repositories on your machine.
 
 You can verify that the properties have been set with these commands
 ```
@@ -112,6 +114,28 @@ git config user.name
 git config user.email
 ```
 or by opening `.git/config` file in your repository.
+
+## Configure an upstream remote
+Unless you just want to make a single quick contribution you will most probably need to update your forked repository with changes from the main repository. In this context, main repository is usually referred to as `upstream`.
+
+It is a good practice to configure an upstream remote (git repo server) and it's easier to do it right away but not required.
+
+To see currentnly configured remotes you can use 
+```
+git remote -v
+```
+You will need original repository's git URL, which you can get the same way as your repository's git URL in "Clone the repository" step. 
+Follow the steps again in "Clone the repository" but instead of going to your (forked) version of the repository, go to the original one.
+
+After you copy the link, you can add the upstream remote with
+
+```
+git remote add upstream <clone url>
+```
+For example:
+```
+git remote add upstream https://github.com/firstcontributions/first-contributions.git 
+```
 
 ## Create a branch
 
