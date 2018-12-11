@@ -75,7 +75,7 @@ Now clone the forked repository to your machine. Go to your GitHub account, open
 Open a terminal and run the following git command:
 
 ```
-git clone "url you just copied"
+git clone <url-you-just-copied>
 ```
 where "url you just copied" (without the quote marks) is the url to this repository (your fork of this project). See the previous steps to obtain the url.
 
@@ -87,15 +87,21 @@ git clone https://github.com/this-is-you/first-contributions.git
 ```
 where `this-is-you` is your GitHub username. Here you're copying the contents of the first-contributions repository in GitHub to your computer.
 
+In order to prepare for next steps, change to the repository directory on your computer (if you are not already there):
+
+```
+cd first-contributions
+```
+
 ## Set up commiter name and email
 
-> If you are only using only one email you can skip this step
+> If you are using only one email you can skip this step
 
 It is possible to use different git configuration for each repo. For example you can have public/private or work/private emails on the same machine.
 
 By default you will most probably have global email and name already configured.
 
-In order to use alternate identity for this repository you have to set it up. Change to the repository directory if you are not already there and:
+In order to use alternate identity for this repository you have to set it up. Note that `" "` are not placeholders but actually required as parameters.
 
 ```
 git config user.name "Your-visible-name"
@@ -124,13 +130,13 @@ To see currentnly configured remotes you can use
 ```
 git remote -v
 ```
-You will need original repository's git URL, which you can get the same way as your repository's git URL in "Clone the repository" step. 
-Follow the steps again in "Clone the repository" but instead of going to your (forked) version of the repository, go to the original one.
+You will need **original repository's** git URL, which you can get the same way as your repository's git URL in *Clone the repository* step. 
+Follow the steps again in *Clone the repository* but instead of going to your (forked) version of the repository, go to the original one.
 
 After you copy the link, you can add the upstream remote with
 
 ```
-git remote add upstream <clone url>
+git remote add upstream <clone-url>
 ```
 For example:
 ```
@@ -139,21 +145,16 @@ git remote add upstream https://github.com/firstcontributions/first-contribution
 
 ## Create a branch
 
-Change to the repository directory on your computer (if you are not already there):
-
-```
-cd first-contributions
-```
 Now create a branch using the `git checkout` command:
 ```
 git checkout -b <add-your-new-branch-name>
 ```
+The name of the branch does not need to have the word *add* in it, but it's a reasonable thing to include because the purpose of this branch is to add your name to a list.
 
 For example:
 ```
 git checkout -b add-alonzo-church
 ```
-(The name of the branch does not need to have the word *add* in it, but it's a reasonable thing to include because the purpose of this branch is to add your name to a list.)
 
 ## Make necessary changes and commit those changes
 
