@@ -196,7 +196,27 @@ Now submit the pull request.
 
 <img style="float: right;" src="assets/submit-pull-request.png" alt="submit pull request" />
 
-Soon I'll be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
+Soon your changes will be merged into the master branch of this project. You will get a notification email once the changes have been merged.
+
+## Syncing with upstream
+In order to not fork and delete repositories all the time, you can sync your version of the repository with the upstream (original) one. You might want to do this to resolve conflicts or pull some code that has been added to the upstream in the meantime. 
+At this point there are probably no new commits between your version and the upstream one, but the process is as follows.
+
+ 
+Navigate to the repository directory on your computer and make sure you're on the `master` branch.
+```
+git checkout master
+```
+
+The next step is to pull the changes from previously configured upstream remote
+```
+git pull upstream master
+```
+
+Finally push your local master branch to your repository
+```
+git push origin master
+```
 
 ## Where to go from here?
 
