@@ -240,6 +240,7 @@
 - [Vladimir Tretyak](https://github.com/tretyakvl);
 - [Leon Liang](https://github.com/leonliang0395)
 - [Travis Virgil](https://github.com/virgilt)
+- [Katarina Simic](https://github.com/simka1911)
 - [Taha haq](https://github.com/tahahaq)
 - [Vinit Kumbharkar](https://github.com/Vin-it)
 - [Josh Maguire](https://github.com/maguirejosh7)
